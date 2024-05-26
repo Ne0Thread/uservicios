@@ -23,6 +23,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path:'empleados',
+    loadChildren: () => import('./empleado/empleado.module').then(m => m.EmpleadoModule),
+  },
+  {
     path:'**',
     redirectTo:'404'
   },

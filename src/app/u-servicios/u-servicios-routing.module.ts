@@ -5,6 +5,9 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { NewRecursoPagesComponent } from './pages/new-recurso-pages/new-recurso-pages.component';
+import { ContratarPageComponent } from './pages/contratar-page/contratar-page.component';
+import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.component';
 
 const routes: Routes = [
   {
@@ -20,6 +23,18 @@ const routes: Routes = [
         component: SearchPageComponent
       },
       {
+        path: 'new-resource',
+        component: NewRecursoPagesComponent
+      },
+      {
+        path: 'contratar',
+        component: ContratarPageComponent
+      },
+      {
+        path: 'prestamos',
+        component: PrestamosPageComponent
+      },
+      {
         path:'edit/:id',
         component: NewPageComponent
       },
@@ -31,6 +46,7 @@ const routes: Routes = [
         path:':id',
         component: UserviciosPageComponent
       },
+      
       {
         path: '**',
         redirectTo: 'list'

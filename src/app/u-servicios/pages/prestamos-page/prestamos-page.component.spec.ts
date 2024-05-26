@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicesTableComponent } from './services-table.component';
+import { PrestamosPageComponent } from './prestamos-page.component';
 
-
-describe('ServicesTableComponent', () => {
-  let component: ServicesTableComponent;
-  let fixture: ComponentFixture<ServicesTableComponent>;
+describe('PrestamosPageComponent', () => {
+  let component: PrestamosPageComponent;
+  let fixture: ComponentFixture<PrestamosPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ServicesTableComponent]
+      declarations: [PrestamosPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ServicesTableComponent);
+    fixture = TestBed.createComponent(PrestamosPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

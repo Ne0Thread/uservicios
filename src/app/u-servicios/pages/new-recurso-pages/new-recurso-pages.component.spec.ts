@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicesTableComponent } from './services-table.component';
+import { NewRecursoPagesComponent } from './new-recurso-pages.component';
 
-
-describe('ServicesTableComponent', () => {
-  let component: ServicesTableComponent;
-  let fixture: ComponentFixture<ServicesTableComponent>;
+describe('NewRecursoPagesComponent', () => {
+  let component: NewRecursoPagesComponent;
+  let fixture: ComponentFixture<NewRecursoPagesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ServicesTableComponent]
+      declarations: [NewRecursoPagesComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ServicesTableComponent);
+    fixture = TestBed.createComponent(NewRecursoPagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

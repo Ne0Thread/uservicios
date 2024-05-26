@@ -8,49 +8,60 @@
     <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Nombre
+          Recurso
         </mat-panel-title>
         <mat-panel-description>
-          descripcion
-          <mat-icon>account_circle</mat-icon>
+          Descripcion
+          <mat-icon>description</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
-
+      
       <mat-form-field>
-        <mat-label>First name</mat-label>
+        <mat-label>Dia (DD/MM/AAAA)</mat-label>
         <input matInput>
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Age</mat-label>
-        <input matInput type="number" min="1">
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Inicio</mat-label>
+        <input type="time" matInput formControlName="startTime" placeholder="Hora de Inicio" required />
       </mat-form-field>
+  
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Finalización</mat-label>
+        <input type="time" matInput formControlName="endTime" placeholder="Hora de Finalización" required />
+      </mat-form-field>
+
       <mat-action-row>
         <button mat-button color="primary" >Next</button>
       </mat-action-row>
     </mat-expansion-panel>
 
-
     <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Nombre
+          Recurso
         </mat-panel-title>
         <mat-panel-description>
-          descripcion
-          <mat-icon>account_circle</mat-icon>
+          Descripcion
+          <mat-icon>description</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
-
+      
       <mat-form-field>
-        <mat-label>First name</mat-label>
+        <mat-label>Dia (DD/MM/AAAA)</mat-label>
         <input matInput>
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Age</mat-label>
-        <input matInput type="number" min="1">
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Inicio</mat-label>
+        <input type="time" matInput formControlName="startTime" placeholder="Hora de Inicio" required />
       </mat-form-field>
+  
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Finalización</mat-label>
+        <input type="time" matInput formControlName="endTime" placeholder="Hora de Finalización" required />
+      </mat-form-field>
+
       <mat-action-row>
         <button mat-button color="primary" >Next</button>
       </mat-action-row>

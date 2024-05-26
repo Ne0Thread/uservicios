@@ -9,6 +9,9 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ServicesTableComponent } from './components/services-table/services-table.component';
+import { NewRecursoPagesComponent } from './pages/new-recurso-pages/new-recurso-pages.component';
+import { ContratarPageComponent } from './pages/contratar-page/contratar-page.component';
+import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { ServicesTableComponent } from './components/services-table/services-tab
     NewPageComponent,
     SearchPageComponent,
     LayoutPageComponent,
-    ServicesTableComponent
+    ServicesTableComponent,
+    NewRecursoPagesComponent,
+    ContratarPageComponent,
+    PrestamosPageComponent
   ],
   imports: [
     CommonModule,

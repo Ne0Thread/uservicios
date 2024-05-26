@@ -1,0 +1,44 @@
+<div class="flex flex-column">
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>Nuevo Recurso</mat-card-title>
+        </mat-card-header>
+  
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput placeholder="Nombre Recurso" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Tipo de Recurso</mat-label>
+        <mat-select>
+            @for (tipo of tipo; track tipo) {
+            <mat-option [value]="tipo.value">{{tipo.viewValue}}</mat-option>
+            }
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <input type="text" matInput placeholder="Descripción" />
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Inicio</mat-label>
+        <input type="time" matInput formControlName="startTime" placeholder="Hora de Inicio" required />
+        <mat-error *ngIf="resourceForm.controls['startTime'].invalid">La hora de inicio es requerida</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="half-width">
+        <mat-label>Hora de Finalización</mat-label>
+        <input type="time" matInput formControlName="endTime" placeholder="Hora de Finalización" required />
+        <mat-error *ngIf="resourceForm.controls['endTime'].invalid">La hora de finalización es requerida</mat-error>
+      </mat-form-field>
+
+      <button mat-button color="primary">
+        <mat-icon>add_circle</mat-icon>
+        Agregar
+      </button>
+
+    </mat-card>
+  </div>

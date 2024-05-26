@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicesTableComponent } from './services-table.component';
+import { ContratarPageComponent } from './contratar-page.component';
 
-
-describe('ServicesTableComponent', () => {
-  let component: ServicesTableComponent;
-  let fixture: ComponentFixture<ServicesTableComponent>;
+describe('ContratarPageComponent', () => {
+  let component: ContratarPageComponent;
+  let fixture: ComponentFixture<ContratarPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ServicesTableComponent]
+      declarations: [ContratarPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ServicesTableComponent);
+    fixture = TestBed.createComponent(ContratarPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
