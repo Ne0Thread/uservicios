@@ -5,30 +5,28 @@
 <!-- <ng-template #table> -->
   <mat-accordion>
     <!-- [expanded]="step === 0" (opened)="setStep(0)" hideToggle -----Se pone en el expasionpanel -->
-    <mat-expansion-panel >
+    <mat-expansion-panel *ngFor="let item of usuarios" >
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Empleado_ID
+          {{item.usuarioId}}
         </mat-panel-title>
         <mat-panel-description>
-          Estado
-          <mat-icon>account_circle</mat-icon>
+          Detalles
+          <mat-icon>info</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
       <mat-card class="card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>ID_EMPLEADO</mat-card-title>
-          <mat-card-subtitle>Nombre Completo</mat-card-subtitle>
+          <mat-card-title>ID_USUARIO: {{item.usuarioId}} </mat-card-title>
+          <mat-card-subtitle>Nombre Completo: {{item.nombre}} </mat-card-subtitle>
           <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
         </mat-card-header>
         <mat-card-content>
-          <h3>ID:</h3>
-          <h3>UserName:</h3>
-          <h3>Unidad:</h3>
-          <h3>Cargo:</h3>
-          <h3>Estado:</h3>
+          <h3>Rol: {{item.rol}} </h3>
+          <h3>Cargo: {{item.convenioId}} </h3>
+          <h3>Id Externa: {{item.idExterna}} </h3>
         </mat-card-content>
         <!-- <mat-card-actions>
           <button mat-button>LIKE</button>
@@ -40,32 +38,6 @@
       <!-- <mat-action-row>
         <button mat-button color="primary" >Next</button>
       </mat-action-row> -->
-    </mat-expansion-panel>
-
-
-    <mat-expansion-panel >
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Nombre
-        </mat-panel-title>
-        <mat-panel-description>
-          descripcion
-          <mat-icon>account_circle</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-form-field>
-        <mat-label>First name</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Age</mat-label>
-        <input matInput type="number" min="1">
-      </mat-form-field>
-      <mat-action-row>
-        <button mat-button color="primary" >Next</button>
-      </mat-action-row>
     </mat-expansion-panel>
   </mat-accordion>
 

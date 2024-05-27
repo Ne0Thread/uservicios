@@ -12,6 +12,7 @@ import { GerentesTableComponent } from './components/gerentes-table/gerentes-tab
 import { UServiciosTableComponent } from './components/u-servicios-table/u-servicios-table.component';
 import { FormAddUserComponent } from './components/form-add-user/form-add-user.component';
 import { FormAddServComponent } from './components/form-add-serv/form-add-serv.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormAddServComponent } from './components/form-add-serv/form-add-serv.c
   imports: [
     CommonModule,
     AdminServiciosRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminServiciosModule { }
