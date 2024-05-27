@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class LayoutPageComponent {
 
   public sideBarItems=[
-    {label:'Listado', icon:'list',url: './list'},
-    {label:'Añadir Unidad', icon:'add', url: './new-uservice'}
+    {label:'Unidades de Servicio', icon:'supportAgent',url: './unSer-list'},
+    {label:'Usuarios', icon:'group', url: './users-list'},
+    {label:'Gerentes', icon:'shield_person', url: './ger-list'}
   ]
 }
