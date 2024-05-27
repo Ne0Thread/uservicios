@@ -1,0 +1,61 @@
+<!-- <div *ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
+  No hay que mostrar
+</div> -->
+
+<!-- <ng-template #table> -->
+  <mat-accordion>
+    <!-- [expanded]="step === 0" (opened)="setStep(0)" hideToggle -----Se pone en el expasionpanel -->
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Nombre
+        </mat-panel-title>
+        <mat-panel-description>
+          descripcion
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Age</mat-label>
+        <input matInput type="number" min="1">
+      </mat-form-field>
+      <mat-action-row>
+        <button mat-button color="primary" >Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Nombre
+        </mat-panel-title>
+        <mat-panel-description>
+          descripcion
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Age</mat-label>
+        <input matInput type="number" min="1">
+      </mat-form-field>
+      <mat-action-row>
+        <button mat-button color="primary" >Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+<!-- </ng-template> -->
