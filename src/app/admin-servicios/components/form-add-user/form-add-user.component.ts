@@ -28,22 +28,22 @@ export class FormAddUserComponent {
     if (this.usuarioForm.valid) {
 
       console.log(this.usuarioForm.value());
-      // const nuevoUsuario: UsuarioRegistro = {
-      //   username: this.,
-      //   email: e_mail,
-      //   password: pass,
-      // };
+      const nuevoUsuario: UsuarioRegistro = {
+        username: this.usuarioForm.get('idUsuario')?.value,
+        email: this.usuarioForm.get('email')?.value,
+        password: this.usuarioForm.get('contrasena')?.value,
+      };
 
-      // this.user.createUsuario(nuevoUsuario).subscribe({
-      //   next: (usuario) => {
-      //     console.log('Usuario creado:', usuario);
-      //     // Maneja la respuesta exitosa aquí
-      //   },
-      //   error: (err) => {
-      //     console.error('Error al crear usuario:', err);
-      //     // Maneja el error aquí
-      //   },
-      // });
+      this.user.createUsuario(nuevoUsuario).subscribe({
+        next: (usuario) => {
+          console.log('Usuario creado:', usuario);
+          // Maneja la respuesta exitosa aquí
+        },
+        error: (err) => {
+          console.error('Error al crear usuario:', err);
+          // Maneja el error aquí
+        },
+      });
 
     }else{
       console.log('formulario invalido');
