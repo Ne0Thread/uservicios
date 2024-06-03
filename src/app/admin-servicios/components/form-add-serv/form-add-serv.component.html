@@ -1,47 +1,45 @@
 <mat-accordion>
-  <!-- <div *ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
-   No hay que mostrar
- </div> -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>add</mat-icon>
+        Agregar Unidad de Servicio
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>help</mat-icon>
+        Oprima aquí para agregar unidad nueva
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
-  <!-- <ng-template #table> -->
-  <mat-accordion>
-    <!-- [expanded]="step === 0" (opened)="setStep(0)" hideToggle -----Se pone en el expasionpanel -->
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon>add</mat-icon>
-          Agregar Unidad de Servicio
-        </mat-panel-title>
-        <mat-panel-description>
-          <mat-icon>help</mat-icon>
-          Oprima aqui para agregar unidad nueva
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-card class="card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Creacion de Unidad de Servicio</mat-card-title>
-          <mat-card-subtitle>Ingrese todos los campos</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Creación de Unidad de Servicio</mat-card-title>
+        <mat-card-subtitle>Ingrese todos los campos</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="unidadForm" (ngSubmit)="addUnidad()">
           <mat-form-field>
             <mat-label>Nombre Unidad</mat-label>
-            <input matInput />
+            <input matInput formControlName="nombreUnidad" placeholder="Ingrese el nombre de la unidad" required>
+            <mat-error *ngIf="nombreUnidad?.invalid">Nombre Unidad es requerido</mat-error>
           </mat-form-field>
-          <hr>
-          <mat-label>Horario de Inicio a Fin</mat-label>
-          <mat-slider min="0" max="24" step="1" discrete #slider>
-            <input value="5" matSliderStartThumb />
-            <input value="16" matSliderEndThumb />
-          </mat-slider >
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>CREAR</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-expansion-panel>
-  </mat-accordion>
+          
+          <mat-form-field>
+            <mat-label>Horario de Inicio</mat-label>
+            <input matInput formControlName="horarioInicio" type="time" required>
+            <mat-error *ngIf="horarioInicio?.invalid">Horario de Inicio es requerido</mat-error>
+          </mat-form-field>
 
-  <!-- </ng-template> -->
+          <mat-form-field>
+            <mat-label>Horario de Fin</mat-label>
+            <input matInput formControlName="horarioFin" type="time" required>
+            <mat-error *ngIf="horarioFin?.invalid">Horario de Fin es requerido</mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button type="submit" [disabled]="unidadForm.invalid">CREAR</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </mat-expansion-panel>
 </mat-accordion>

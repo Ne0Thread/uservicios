@@ -1,6 +1,7 @@
 export interface UnidadServicio {
-  unidadId:             number;
-  nombre:               string;
+  unidadId: number;
+  nombre: string;
   horarioLaboralInicio: string;
-  horarioLaboralFin:    string;
+  horarioLaboralFin: string;
 }
+
