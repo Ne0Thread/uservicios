@@ -12,6 +12,9 @@ import { ServicesTableComponent } from './components/services-table/services-tab
 import { NewRecursoPagesComponent } from './pages/new-recurso-pages/new-recurso-pages.component';
 import { ContratarPageComponent } from './pages/contratar-page/contratar-page.component';
 import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.component';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
+import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
+
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.co
   imports: [
     CommonModule,
     UServiciosRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MaterialModule,
   ]
 })
 export class UServiciosModule { }
