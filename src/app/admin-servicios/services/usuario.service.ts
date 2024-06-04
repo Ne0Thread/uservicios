@@ -6,7 +6,7 @@ import { envionments } from '../../../environments/environments';
 import { UsuarioRegistro } from '../interfaces/usuarioRegistro.interface';
 
 @Injectable({providedIn: 'root'})
-export class Usuario_Service {
+export class Usuario_Service {  
 
   private baseUrl: string = envionments.baseUrl;
 
@@ -18,6 +18,4 @@ export class Usuario_Service {
   createUsuario(usuario:UsuarioRegistro):Observable<UsuarioRegistro>{
     return this.http.post<UsuarioRegistro>(`${this.baseUrl}/signup`,usuario);
   }
-
-
 }

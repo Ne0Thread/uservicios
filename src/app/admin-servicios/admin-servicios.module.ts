@@ -13,6 +13,8 @@ import { UServiciosTableComponent } from './components/u-servicios-table/u-servi
 import { FormAddUserComponent } from './components/form-add-user/form-add-user.component';
 import { FormAddServComponent } from './components/form-add-serv/form-add-serv.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -31,7 +33,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AdminServiciosRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  exports: [
+    FormAddUserComponent
   ]
 })
 export class AdminServiciosModule { }

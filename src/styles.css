@@ -1,19 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 
+html, body {
+  height: 90%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-panel-description p {
   margin: 0;
   padding: 0;
 }
 
-.spacer{
+.spacer {
   flex: 1 1 auto;
 }
 
-.card{
-  max-width: 600px;
-  margin-bottom: 8px;
+.card {
+  max-width: 900px;
+  margin: 0 auto; /* Centrar la tarjeta horizontalmente */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 90%;
+  margin-left: 56px;
+  margin-right: 56px;
+  margin-bottom: 20px;
+}
+
+form .mat-form-field {
+  width: 10%;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+button {
+  max-width: 60%;
+  align-self: center;
+}
+
+h1 {
+  text-align: center; 
+}
+
+h2 {
+  text-align: center; 
 }
