@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutPageComponent } from './auth/pages/layout-page/layout-page.component';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
+import { AuthGuardService } from './auth/guards/auth.guard';
 
 const routes: Routes = [
   //localhost:4200/auth/
@@ -16,6 +17,8 @@ const routes: Routes = [
   {
     path:'admin',
     loadChildren: () => import('./admin-servicios/admin-servicios.module').then(m => m.AdminServiciosModule),
+    canActivate:[AuthGuardService],
+    canMatch: [AuthGuardService]
   },
   {
     path:'404',

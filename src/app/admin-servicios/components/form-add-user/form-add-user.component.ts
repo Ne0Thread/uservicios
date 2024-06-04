@@ -32,6 +32,7 @@ export class FormAddUserComponent {
 
   addUsuario() {
     if (this.usuarioForm.valid) {
+
       const nuevoUsuario = {
         username: this.usuarioForm.value.nombre,
         email: this.usuarioForm.value.email,
