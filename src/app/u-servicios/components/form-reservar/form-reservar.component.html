@@ -1,0 +1,29 @@
+<form [formGroup]="reservarForm" (ngSubmit)="bookResource()">
+    <mat-form-field>
+      <mat-label>ID del Recurso</mat-label>
+      <input matInput formControlName="resourceId" placeholder="Ingrese el ID del recurso" required>
+      <mat-error *ngIf="reservarForm.get('resourceId')?.invalid">ID del recurso es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>ID del Usuario</mat-label>
+      <input matInput formControlName="userId" placeholder="Ingrese el ID del usuario" required>
+      <mat-error *ngIf="reservarForm.get('userId')?.invalid">ID del usuario es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fecha</mat-label>
+      <input matInput formControlName="date" placeholder="Ingrese la fecha (YYYY-MM-DD)" required>
+      <mat-error *ngIf="reservarForm.get('date')?.invalid">La fecha es requerida</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hora de Inicio</mat-label>
+      <input matInput formControlName="start" placeholder="Ingrese la hora de inicio (HH:MM)" required>
+      <mat-error *ngIf="reservarForm.get('start')?.invalid">La hora de inicio es requerida</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hora de Fin</mat-label>
+      <input matInput formControlName="end" placeholder="Ingrese la hora de fin (HH:MM)" required>
+      <mat-error *ngIf="reservarForm.get('end')?.invalid">La hora de fin es requerida</mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="reservarForm.invalid">Reservar</button>
+  </form>
+  

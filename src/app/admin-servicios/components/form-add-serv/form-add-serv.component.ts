@@ -11,7 +11,7 @@ import { UnidadRegistro } from '../../interfaces/unidadRegistro.interface';
 export class FormAddServComponent {
 
   unidadForm: FormGroup;
-  token: string = 'token';
+  token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3MTc1NTYwMTcsImV4cCI6MTcxNzU1OTYxN30.RxzyCQ9LlW6mvoTI-y7_GAt7Y0HP3f0qzvK-Bb3m2_g';
 
   constructor(private serv: U_Servicio_Service, private fb: FormBuilder) {
     this.unidadForm = this.fb.group({

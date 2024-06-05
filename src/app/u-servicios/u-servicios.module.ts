@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { UServiciosRoutingModule } from './u-servicios-routing.module';
 import { UserviciosPageComponent } from './pages/uservicios-page/uservicios-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
@@ -13,9 +12,8 @@ import { NewRecursoPagesComponent } from './pages/new-recurso-pages/new-recurso-
 import { ContratarPageComponent } from './pages/contratar-page/contratar-page.component';
 import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.component';
 import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
-import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormReservarComponent } from './components/form-reservar/form-reservar.component'; // Importa ReactiveFormsModule
 
 @NgModule({
   declarations: [
@@ -27,15 +25,16 @@ import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsMo
     ServicesTableComponent,
     NewRecursoPagesComponent,
     ContratarPageComponent,
-    PrestamosPageComponent
+    PrestamosPageComponent,
+    FormReservarComponent
   ],
   imports: [
     CommonModule,
     UServiciosRoutingModule,
     MaterialModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class UServiciosModule { }
+
