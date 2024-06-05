@@ -13,7 +13,8 @@ import { ContratarPageComponent } from './pages/contratar-page/contratar-page.co
 import { PrestamosPageComponent } from './pages/prestamos-page/prestamos-page.component';
 import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormReservarComponent } from './components/form-reservar/form-reservar.component'; // Importa ReactiveFormsModule
+import { FormReservarComponent } from './components/form-reservar/form-reservar.component';
+import { PrestamosTableComponent } from './components/prestamos-table/prestamos-table.component'; // Importa ReactiveFormsModule
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormReservarComponent } from './components/form-reservar/form-reservar.
     NewRecursoPagesComponent,
     ContratarPageComponent,
     PrestamosPageComponent,
-    FormReservarComponent
+    FormReservarComponent,
+    PrestamosTableComponent
   ],
   imports: [
     CommonModule,

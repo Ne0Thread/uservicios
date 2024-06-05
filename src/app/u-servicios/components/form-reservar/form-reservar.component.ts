@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class FormReservarComponent implements OnInit {
   reservarForm: FormGroup;
-  token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3MTc1NTYwMTcsImV4cCI6MTcxNzU1OTYxN30.RxzyCQ9LlW6mvoTI-y7_GAt7Y0HP3f0qzvK-Bb3m2_g'; // Token JWT
+  token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3MTc2MDA0MjAsImV4cCI6MTcxNzYwNDAyMH0.BAd9Y0dcUQKf09ISwr3jE0CAcgJkulzM54eazGJDpHw'; // Token JWT
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.reservarForm = this.fb.group({
