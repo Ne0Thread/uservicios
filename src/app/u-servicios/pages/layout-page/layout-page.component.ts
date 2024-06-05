@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../../auth/services/auth.service';
 import { Router } from '@angular/router';
 import { UserLogin } from '../../../auth/interfaces/user.interface';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-layout-page',

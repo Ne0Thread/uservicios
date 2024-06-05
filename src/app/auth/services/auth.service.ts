@@ -28,6 +28,7 @@ export class AuthService {
       ),
       tap((user) => localStorage.setItem('pass', datalog.password.toString())),
       catchError((error) => {
+
         console.error('Error en el logueo!!', error);
         return throwError(error);
       })
