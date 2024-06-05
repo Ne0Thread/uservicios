@@ -1,5 +1,7 @@
+import { Time } from "@angular/common";
+
 export interface UnidadRegistro {
-    nombre: string;
-    horarioLaboralInicio: string;
-    horarioLaboralFin: string;
+    name: string;
+    startWorkingHours: string;
+    endWorkingHours: string;
   }
