@@ -18,7 +18,15 @@ export class LoginPageComponent {
   onLogin():void{
     this.authService.login('john@example.com','password123')
     .subscribe(user=>{
-      this.router.navigate(['/admin'])
+      const rol = localStorage.getItem('rol'); // Obtener el valor de "rol" del LocalStorage
+      if (rol === 'admin') {
+        this.router.navigate(['/admin']);
+      } else if (rol === 'usuario') {
+        this.router.navigate(['/u-servicios']);
+      } else {
+        // Si no hay un rol definido o es otro valor, redirigir a una ruta predeterminada
+        this.router.navigate(['/u-servicios']);
+      }
     })
   }
 

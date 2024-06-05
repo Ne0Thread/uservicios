@@ -18,7 +18,7 @@ export class U_Servicio_Service {
   createUnidad(nuevaUnidad: UnidadRegistro, token: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `${token}`
     });
     return this.http.post<any>(`${this.baseUrl}/serviceunit`, nuevaUnidad, { headers });
   }

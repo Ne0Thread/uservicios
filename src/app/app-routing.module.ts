@@ -13,6 +13,8 @@ const routes: Routes = [
   {
     path:'u-servicios',
     loadChildren: () => import('./u-servicios/u-servicios.module').then(m => m.UServiciosModule),
+    canActivate:[AuthGuardService],
+    canMatch: [AuthGuardService]
   },
   {
     path:'admin',

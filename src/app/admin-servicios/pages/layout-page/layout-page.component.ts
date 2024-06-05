@@ -13,7 +13,7 @@ export class LayoutPageComponent {
   public sideBarItems=[
     {label:'Unidades de Servicio', icon:'supportAgent',url: './unSer-list'},
     {label:'Usuarios', icon:'group', url: './users-list'},
-    {label:'Gerentes', icon:'shield_person', url: './ger-list'}
+    // {label:'Gerentes', icon:'shield_person', url: './ger-list'}
   ]
   constructor(
     private authService:AuthService,
